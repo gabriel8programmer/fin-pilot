@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-950: #081B22;
+  --color-brand-900: #0D2D38;
+  --color-brand-800: #123B4A;
+  --color-brand-700: #194D60;
+  --color-brand-600: #1E5A6A;
+  --color-brand-500: #2C6E80;
+  --color-brand-400: #4B8797;
+  --color-brand-300: #82AFBC;
+  --color-brand-200: #BDD8E0;
+  --color-brand-100: #EAF2F4;
+  --color-brand-50: #F3F8F9;
+
+  --color-accent-teal: #2CB6A3;
+  --color-accent-teal-dark: #1F9686;
+  --color-accent-teal-light: #EBF8F5;
+
+  --color-graphite-900: #141C21;
+  --color-graphite-800: #1C252B;
+  --color-graphite-700: #2C3942;
+  --color-graphite-600: #44545F;
+  --color-graphite-500: #5B6E79;
+  --color-graphite-400: #7C919D;
+  --color-graphite-300: #A8B8C0;
+  --color-graphite-200: #D3DDE2;
+  --color-graphite-100: #EAF0F3;
+  --color-graphite-50: #F6F9FA;
+
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-plus-jakarta), var(--font-inter), sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8FAFB;
+  --foreground: #1C252B;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom scrollbars and subtle focus outline */
+:focus-visible {
+  outline: 2px solid #2CB6A3;
+  outline-offset: 2px;
 }
